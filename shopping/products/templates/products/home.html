@@ -1,0 +1,35 @@
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    th,
+    td {
+        background-color: #686868;
+    }
+
+    th,
+    td {
+        border-style: outset;
+    }
+</style>
+{% extends 'base.html' %}
+{% block title %} HOME {% endblock %}
+{% block body %}
+
+<!-- <li>{{i.title}}: {{i.content}} :{{i.price}}</li> -->
+<table>
+    {% for i in items %}
+    <tr>
+        <td>{{i.title}}</td>
+        <td>{{i.content}}</td>
+        <td>{{i.price}}</td>
+        <td><a href="details/{{ x.id }}">{{i.title}} {{i.price}}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
