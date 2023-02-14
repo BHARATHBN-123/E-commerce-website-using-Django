@@ -17,14 +17,13 @@
     }
 </style>
 {% extends 'products/base.html' %}
-{% block title %} HOME {% endblock %}
+{% block title %} PRODUCT {% endblock %}
 {% block body %}
 
 <!-- <li>{{i.title}}: {{i.content}} :{{i.price}}</li> -->
 <table>
     {% for i in items %}
     <tr>
-        <td>{{i.id}}</td>
         <td>{{i.title}}</td>
         <td>{{i.content}}</td>
         <td>{{i.price}}</td>
